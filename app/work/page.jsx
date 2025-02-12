@@ -19,36 +19,68 @@ import WorkSliderBtn from "@/components/WorkSliderBtn";
 const projects = [
   {
     num: "01",
-    category: "fontend",
-    title: "Project 1",
+    category: "Covid Landing Page",
+    title: "Covid Landing Page",
     description:
-      "  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut minus exercitationem voluptatum. Autem aspernatur tempora at consequatur?",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "JavaScript" }],
-    images: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
+      " There is no specific medicine to prevent or treat coronavirus disease (COVID-19). People may need supportive care to",
+    stack: [
+      { name: "HTML" },
+      { name: "SCSS" },
+      { name: "CSS" },
+      { name: "JavaScript" },
+    ],
+    images: "/assets/work/Covid.png",
+    live: "https://covid-mu-eight.vercel.app/",
+    github: "https://github.com/VannThanhh/Covid",
   },
   {
     num: "02",
-    category: "fontend",
-    title: "Project 2",
+    category: "WrenMaster",
+    title: "WrenMaster",
     description:
       "  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut minus exercitationem voluptatum. Autem aspernatur tempora at consequatur?",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "JavaScript" }],
-    images: "/assets/work/thumb2.png",
-    live: "",
-    github: "",
+    stack: [{ name: "HTML" }, { name: "CSS" }, { name: "JavaScript" }],
+    images: "/assets/work/Wren.png",
+    live: "https://wren-master-beta.vercel.app/",
+    github: "https://github.com/VannThanhh/WrenMaster",
   },
   {
     num: "03",
-    category: "fontend",
-    title: "Project 3",
+    category: "Grilli-Masterr",
+    title: "Grilli-Masterr",
     description:
       "  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut minus exercitationem voluptatum. Autem aspernatur tempora at consequatur?",
-    stack: [{ name: "ReactJs" }, { name: "Tailwind CSS" }],
-    images: "/assets/work/thumb3.png",
-    live: "",
-    github: "",
+    stack: [{ name: "HTML" }, { name: "CSS" }, { name: "JavaScript" }],
+    images: "/assets/work/Grilli.png",
+    live: "https://grilli-masterr.vercel.app/",
+    github: "https://github.com/VannThanhh/Grilli-Masterr",
+  },
+  {
+    num: "04",
+    category: "Personal Portfolio Website",
+    title: "Personal Portfolio Website",
+    description:
+      "  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut minus exercitationem voluptatum. Autem aspernatur tempora at consequatur?",
+    stack: [
+      { name: "HTML" },
+      { name: "SCSS" },
+      { name: "CSS" },
+      { name: "JavaScript" },
+    ],
+    images: "/assets/work/Protfile.png",
+    live: "https://portfolio-gamma-murex-67.vercel.app/",
+    github: "https://github.com/VannThanhh/Portfolio",
+  },
+  {
+    num: "05",
+    category: "Foodie",
+    title: "Foodie",
+    description:
+      "  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut minus exercitationem voluptatum. Autem aspernatur tempora at consequatur?",
+    stack: [{ name: "HTML" }, { name: "CSS" }, { name: "JavaScript" }],
+    images: "/assets/work/Foodie.png",
+    live: "https://foodie-eta-three.vercel.app/",
+    github: "https://github.com/VannThanhh/Foodie",
   },
 ];
 const Work = () => {
@@ -112,13 +144,13 @@ const Work = () => {
                         <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
 
-                      <TooltipContent>Live</TooltipContent>
+                      <TooltipContent>live</TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
 
                 {/* github project button */}
-                <Link href={project.live}>
+                <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">

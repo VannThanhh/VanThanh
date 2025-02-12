@@ -31,16 +31,12 @@ const about = {
       fieldValue: "Trương Văn Thanh",
     },
     {
-      fieldName: "Phone",
-      fieldValue: "(+84) 0869965023",
-    },
-    {
       fieldName: "Experience",
       fieldValue: "0 Year",
     },
     {
-      fieldName: "Skype",
-      fieldValue: "live:truongvanthanh",
+      fieldName: "Phone",
+      fieldValue: "(+84) 0869965023",
     },
     {
       fieldName: "Nationality",
@@ -49,10 +45,6 @@ const about = {
     {
       fieldName: "Email",
       fieldValue: "truongvanthanh2609@gmail.com",
-    },
-    {
-      fieldName: "Internship",
-      fieldValue: "Available",
     },
     {
       fieldName: "Languages",
@@ -65,40 +57,29 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My Experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum inventore repellendus labore deserunt aliquam excepturi consequatur itaque?",
+    "Here are some personal and academic projects I have worked on, showcasing my programming skills.",
   items: [
-    [
-      {
-        company: "Personal Project",
-        position: "Front-End Developer",
-        duration: "Jan 2024 - Present",
-      },
-      {
-        company: "University Project",
-        position: "Team Lead",
-        duration: "Sep 2023 - Dec 2023",
-      },
-      {
-        company: "Open Source Contribution",
-        position: "Contributor",
-        duration: "Jun 2023 - Aug 2023",
-      },
-      {
-        company: "Hackathon Event",
-        position: "Participant",
-        duration: "Mar 2023",
-      },
-      {
-        company: "Open Source Contribution",
-        position: "Contributor",
-        duration: "Jun 2023 - Aug 2023",
-      },
-      {
-        company: "Hackathon Event",
-        position: "Participant",
-        duration: "Mar 2023",
-      },
-    ],
+    {
+      project: "Foodie - Online Food Ordering System",
+      role: "Full Stack Developer",
+      duration: "Jan 2024 - Present",
+      description:
+        "Built an online food ordering platform using Next.js, MongoDB, and Tailwind CSS.",
+    },
+    {
+      project: "Grill-Master - BBQ Store Website",
+      role: "Front-End Developer",
+      duration: "Oct 2023 - Dec 2023",
+      description:
+        "Developed the UI for a BBQ store using React.js and Tailwind CSS.",
+    },
+    {
+      project: "Personal Portfolio Website",
+      role: "Front-End Developer",
+      duration: "Aug 2023 - Sep 2023",
+      description:
+        "Designed and built a personal website to showcase my projects and skills.",
+    },
   ],
 };
 
@@ -106,38 +87,38 @@ const education = {
   icon: "/assets/resume/badge.svg",
   title: "My Education",
   description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum inventore repellendus labore deserunt aliquam excepturi consequatur itaque?",
+    "I have been studying at the College of Information Technology, Ho Chi Minh City, majoring in Information Technology. During my studies, I have enhanced my knowledge in programming, computer systems, and software development.",
   items: [
     {
-      institution: "Online Couse Platfronm",
-      degree: "Full Stack Web Development Bootcamp",
-      duration: "2023",
+      institution: "College of Information Technology, Ho Chi Minh City",
+      degree: "Information Technology",
+      duration: "10/2022 - 10/2024",
     },
-    {
-      institution: "Codecademy",
-      degree: "Font-End Track",
-      duration: "2023",
-    },
-    {
-      institution: "Online Course",
-      degree: "Font-End Track",
-      duration: "2023",
-    },
-    {
-      institution: "Online Course",
-      degree: "Font-End Track",
-      duration: "2023",
-    },
-    {
-      institution: "Online Course",
-      degree: "Font-End Track",
-      duration: "2023",
-    },
-    {
-      institution: "Online Course",
-      degree: "Font-End Track",
-      duration: "2023",
-    },
+    // {
+    //   institution: "Codecademy",
+    //   degree: "Font-End Track",
+    //   duration: "2023",
+    // },
+    // {
+    //   institution: "Online Course",
+    //   degree: "Font-End Track",
+    //   duration: "2023",
+    // },
+    // {
+    //   institution: "Online Course",
+    //   degree: "Font-End Track",
+    //   duration: "2023",
+    // },
+    // {
+    //   institution: "Online Course",
+    //   degree: "Font-End Track",
+    //   duration: "2023",
+    // },
+    // {
+    //   institution: "Online Course",
+    //   degree: "Font-End Track",
+    //   duration: "2023",
+    // },
   ],
 };
 
@@ -209,24 +190,24 @@ const Resume = () => {
             {/* experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold"> {experience.title} </h3>
+                <h3 className="text-4xl font-bold">{experience.title}</h3>
                 <p className="max-w-[600px] mx-auto text-white/60 xl:mx-0">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {experience.items[0]?.map((item, index) => (
+                    {experience.items.map((item, index) => (
                       <li
                         key={index}
                         className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                       >
                         <span className="text-accent">{item.duration}</span>
                         <h3 className="textxl max-w-[260px] min-h-[60px] text-center lg:text-left">
-                          {item.position}
+                          {item.role}
                         </h3>
-                        <div className="flex items-center gap-3 ">
+                        <div className="flex items-center gap-3">
                           <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                          <p className="text-white/60">{item.company}</p>
+                          <p className="text-white/60">{item.project}</p>
                         </div>
                       </li>
                     ))}
