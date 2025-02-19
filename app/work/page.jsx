@@ -50,10 +50,10 @@ const projects = [
     title: "Grilli-Masterr",
     description:
       "  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut minus exercitationem voluptatum. Autem aspernatur tempora at consequatur?",
-    stack: [{ name: "HTML" }, { name: "CSS" }, { name: "JavaScript" }],
+    stack: [{ name: "ReactJS" }, { name: "TailWind CSS" }],
     images: "/assets/work/Grilli.png",
-    live: "https://grilli-masterr.vercel.app/",
-    github: "https://github.com/VannThanhh/Grilli-Masterr",
+    live: "https://grilli-master-react-js.vercel.app/",
+    github: "https://github.com/VannThanhh/Grilli-Master-ReactJS",
   },
   {
     num: "04",
